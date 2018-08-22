@@ -1,4 +1,4 @@
-import { WebView as NativeWebView } from 'react-native';
+import WKWebView from 'react-native-wkwebview-reborn'
 import { withMessaging } from './hoc';
 
-export const WebView = withMessaging(NativeWebView);
+export const WebView = withMessaging(WKWebView);
