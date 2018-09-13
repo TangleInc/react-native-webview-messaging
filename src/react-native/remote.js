@@ -25,7 +25,7 @@ export class Remote extends EventEmitter {
     if (fromWebview) {
       super.emit(eventName, eventData);
     } else {
-      this.wv.injectJavaScript(`(function (global) {
+      this.wv.evaluateJavaScript(`(function (global) {
         var LIB_PREFIX = ${JSON.stringify(LIB_PREFIX)};
         var LIB_READY_KEY = ${JSON.stringify(LIB_READY_KEY)};
         var eventName = ${JSON.stringify(eventName)};

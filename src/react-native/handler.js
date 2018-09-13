@@ -4,7 +4,7 @@ import { resolveRemote } from './remote-resolver';
 export function handleWebViewMessage(webview, event) {
   const { data } = event.nativeEvent;
 
-  if (data.indexOf(LIB_PREFIX) !== 0) {
+  if (typeof data !== 'string' || data.indexOf(LIB_PREFIX) !== 0) {
     return;
   }
 
