@@ -5,6 +5,9 @@ export class Remote extends EventEmitter {
   constructor(wv) {
     super();
     this.wv = wv;
+    this.injectJavaScript = wv.evaluateJavaScript
+      ? wv.evaluateJavaScript
+      : wv.injectJavaScript;
 
     this.ready = new Promise(resolve => {
       this.once(Events.READY, () => {
@@ -25,7 +28,7 @@ export class Remote extends EventEmitter {
     if (fromWebview) {
       super.emit(eventName, eventData);
     } else {
-      this.wv.evaluateJavaScript(`(function (global) {
+      this.injectJavaScript(`(function (global) {
         var LIB_PREFIX = ${JSON.stringify(LIB_PREFIX)};
         var LIB_READY_KEY = ${JSON.stringify(LIB_READY_KEY)};
         var eventName = ${JSON.stringify(eventName)};
