@@ -8,7 +8,7 @@
     "communication"
   ],
   "author": "Andrei Volchenko <volchenko.andrei@gmail.com>",
-  "main": "src/react-native",
+  "main": "dist/react-native",
   "scripts": {
     "dev": "NODE_ENV=dev && webpack -w",
     "build": "NODE_ENV=production && npm run clean && webpack --progress",
@@ -35,6 +35,6 @@
   },
   "dependencies": {
     "events": "^1.1.1",
-    "react-native-wkwebview-reborn": "1.22.0"
+    "react-native-wkwebview-reborn": "github:TangleInc/react-native-wkwebview#0ceebe7"
   }
 }
