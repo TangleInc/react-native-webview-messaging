@@ -2309,7 +2309,7 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-"react-native-wkwebview-reborn@github:TangleInc/react-native-wkwebview#6cc617f":
+react-native-wkwebview-reborn@TangleInc/react-native-wkwebview#6cc617f:
   version "1.22.0"
   resolved "https://codeload.github.com/TangleInc/react-native-wkwebview/tar.gz/6cc617f0a577d1f174a02247ed436d94e7ef8877"
   dependencies:
