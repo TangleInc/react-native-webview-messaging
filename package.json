@@ -35,6 +35,9 @@
   },
   "dependencies": {
     "events": "^1.1.1",
-    "react-native-wkwebview-reborn": "github:TangleInc/react-native-wkwebview#6cc617f"
+    "react-native-wkwebview-reborn": "TangleInc/react-native-wkwebview#6cc617f"
+  },
+  "resolutions": {
+    "react-native-wkwebview-reborn": "TangleInc/react-native-wkwebview#6cc617f"
   }
 }
