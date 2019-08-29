@@ -40,6 +40,6 @@ module.exports = {
     }, {
       from: './package.json',
       to: '.',
-    }]).filter(Boolean),
-  ]
+    }])
+  ].filter(Boolean),
 };
