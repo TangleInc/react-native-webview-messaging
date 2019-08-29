@@ -1,4 +1,3 @@
-
 {
   "name": "react-native-webview-messaging",
   "version": "2.0.0-alpha.4",
@@ -12,7 +11,7 @@
   "main": "src/react-native",
   "scripts": {
     "dev": "NODE_ENV=dev && webpack -w",
-    "build": "NODE_ENV=production && npm run clean && webpack --progress",
+    "build": "NODE_ENV=production && webpack --progress",
     "clean": "rm -rf dist",
     "examples:build": "cd examples && npm i && npm run web:build && cd .."
   },
@@ -32,9 +31,12 @@
   "license": "MIT",
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "@babel/runtime": "*"
   },
   "dependencies": {
-    "events": "^1.1.1"
+    "@babel/runtime": "^7.5.5",
+    "events": "^1.1.1",
+    "react": "^16.9.0"
   }
 }
