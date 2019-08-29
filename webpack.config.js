@@ -37,6 +37,9 @@ module.exports = {
     }, {
       from: './src/shared',
       to: './shared',
-    }])
-  ].filter(Boolean),
+    }, {
+      from: './package.json',
+      to: '.',
+    }]).filter(Boolean),
+  ]
 };
