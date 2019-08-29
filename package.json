@@ -13,7 +13,8 @@
     "dev": "NODE_ENV=dev && webpack -w",
     "build": "NODE_ENV=production && webpack --progress",
     "clean": "rm -rf dist",
-    "examples:build": "cd examples && npm i && npm run web:build && cd .."
+    "examples:build": "cd examples && npm i && npm run web:build && cd ..",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
