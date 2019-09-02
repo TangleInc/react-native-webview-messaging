@@ -12,6 +12,15 @@ function stringify(type, payload, meta) {
 function sendToRemote(data) {
   if (window.ReactNativeWebView) {
     window.ReactNativeWebView.postMessage(data)
+    return
+  }
+  
+  if (window.postMessage.length === 2) {
+    requestAnimationFrame(() => {
+      sendToRemote(data);
+    });
+  } else {
+    window.postMessage(data);
   }
 }
 
