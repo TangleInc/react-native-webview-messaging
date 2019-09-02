@@ -1,8 +1,6 @@
 import EventEmitter from 'events';
 import { LIB_PREFIX, Events } from '../shared/constants';
 
-const isIPhone = navigator.userAgent.toLowerCase().indexOf('iphone') > -1
-
 function stringify(type, payload, meta) {
   return LIB_PREFIX + JSON.stringify({
     type,
@@ -12,21 +10,17 @@ function stringify(type, payload, meta) {
 }
 
 function sendToRemote(data) {
-  if (isIPhone) {
-    if (window.postMessage.length === 2) {
-      requestAnimationFrame(() => {
-        sendToRemote(data);
-      });
-    } else {
-      window.postMessage(data);
-    }
-
-    return
-  }
-
-
   if (window.ReactNativeWebView) {
     window.ReactNativeWebView.postMessage(data)
+    return
+  }
+  
+  if (window.postMessage.length === 2) {
+    requestAnimationFrame(() => {
+      sendToRemote(data);
+    });
+  } else {
+    window.postMessage(data);
   }
 }
 
