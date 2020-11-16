@@ -30,8 +30,8 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "react": "*",
-    "react-native": "*",
+    "react": "16.8.6",
+    "react-native": "0.60.15",
     "@babel/runtime": "*"
   },
   "dependencies": {
